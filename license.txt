@@ -1,0 +1,30 @@
+PolySaken Free Software License 1.1:
+Where the author(s) include:
+PolySaken (@Poly_Saken on twitter)
+  
+  LICENSE TEXT
+      1. You must include this license unmodified with any version, derivative, or copy of this 
+    software.
+      2. You may modify, redistribute, and copy from this software, and you may also embed or 
+    otherwise include it in other software. However, you may not obfuscate this software in any 
+    way as to make it unreadable by a human, and the source code must always be easily acquirable. 
+    Anything you add to the software is your property and you may license it as you wish, separately from the initial software.
+      3. You may not claim to own this software, 
+    and only the author(s) may claim this to be the original or official version.
+      4. This software is made by the specified author(s) and you may not claim otherwise. You 
+    may, however, notify that you have made changes although you are not required to.
+      5. You may profit from the use of this software as a library, module, component, or other 
+    form of inclusion in a larger software, however under no circumstances may you profit 
+    from the software on its own, as a whole or in part.
+      6. If you have express permission from the author(s) you may bypass one or more of these 
+    rules. Such permission must come in the form of a public statement by the author(s).
+      7. Use of this software is entirely the choice of the individual, and the author(s) are not 
+    liable for any misuse of this software. This software also comes with no warranty.
+      8. The author(s) hold full right to change or terminate this license at any time. This 
+    change does not apply retroactively, nor will it affect any existing derivatives. In the case 
+    that this software is relicensed or the license is terminated, any existing derivatives become 
+    separate software and as such property of the party which created them. Older versions of the 
+    software will still be property of the original author(s), and their terms of license will not 
+    change.
+    
+This license itself is free to use by anyone for any purpose, without restriction. This license may be adapted for use by any party, with the stipulation that is must not be affiliated with PolySaken in any way.
