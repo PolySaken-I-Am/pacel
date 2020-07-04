@@ -17,7 +17,6 @@ pacel.invHUDs={}
 pacel.move=function(area, scene)
   pacel.currentPos.area=area
   pacel.currentPos.scene=scene
-  pacel.saveCheck()
 end
 
 pacel.utils={
@@ -82,6 +81,15 @@ end
 pacel.Area=function(name, tags, def)
   assert(def, "Area created without definition")
   assert(name, "Area created without name")
+  
+  if def.bg then 
+    def.bg=love.graphics.newImage(def.bg)
+  end
+  
+  if def.fg then 
+    def.fg=love.graphics.newImage(def.fg)
+  end
+  
   if tags then
     for _,v in pairs(tags) do
       assert(pacel.tags["all"][v] or pacel.tags["area"][v], "Area created with invalid tag")
@@ -452,27 +460,3 @@ pacel.Check=function(area, scene)
   pacel.MouseReleasedButton=0
 end
 
-pacel.saveCheck=function()
-    local dir = love.filesystem.getSaveDirectory()
-    local r=io.open(dir.."/save", "w")
-    local t={mode=pacel.mode, pos=pacel.utils.table.Clone(pacel.currentPos), xt=pacel.utils.table.Clone(pacel.world)}
-    r:write(TSerial.pack(t, function(n) return "<function>" end, false))
-    r:close()
-end
-
-pacel.load=function()
-  local dir = love.filesystem.getSaveDirectory()
-  if io.open(dir.."/save") then
-    local s=io.open(dir.."/save", r)
-    local s2=s:read()
-    local t=TSerial.unpack(s2, true)
-    s:close()
-    assert(t.mode, "Save file corrupt")
-    assert(t.pos, "Save file corrupt")
-    assert(t.xt, "Save file corrupt")
-    
-    pacel.mode=t.mode
-    pacel.currentPos=pacel.utils.table.Clone(t.pos)
-    pacel.world=pacel.utils.table.Clone(t.xt)
-  end
-end
